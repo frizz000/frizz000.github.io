@@ -19,7 +19,7 @@
       disable: 'mobile'
     });
   }
-
+  
   /**
    * Navbar effects and scrolltop buttons upon scrolling
    */
@@ -90,5 +90,16 @@
 
   // Add your javascript here
 
+  //add scrip to count my age
+
+  var today = new Date();
+  var birthDate = new Date("1980-03-26");
+  var age = today.getFullYear() - birthDate.getFullYear();
+  var m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+  }
+
+  document.getElementById("age").innerHTML = age;
 
 })();
